@@ -1,0 +1,368 @@
+body {
+  background-color: #f2f2f2;
+}
+
+/* Menú lateral */
+.container-menu {
+  position: fixed;
+  background-color: #1c1c1c;
+  width: 220px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: white;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.container-menu h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-menu nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.container-menu nav a:hover {
+  background-color: #333;
+}
+
+.container-menu nav a i {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+
+.logout a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  font-family: Arial;
+  align-items: center;
+  gap: 10px;
+  padding: 35px 20px;
+}
+
+/* Barra superior */
+.barra-superior {
+  margin-left: 220px;
+  height: 110px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.05);
+  position: relative;
+  transition: margin-left 0.3s ease, padding 0.3s ease;
+}
+
+.titulo-seccion {
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Contenido principal */
+.tarjeta {
+  margin: 50px 100px 0 300px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  transition: margin 0.3s ease, padding 0.3s ease;
+}
+
+.acciones-superiores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Botón crear */
+.btn-crear {
+  background: #1c1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: white;
+}
+
+.usuario .material-symbols-rounded {
+  font-variation-settings: 'FILL' 1;
+  color: black;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-family: Arial;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+thead {
+  background-color: #1c1c1c;
+  color: white;
+}
+
+/* Íconos */
+.icono-boton {
+  cursor: pointer;
+}
+
+.icono-boton .material-symbols-rounded {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* Tabla responsive */
+.tabla-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-responsive table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-contenido {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  font-family: 'Segoe UI', sans-serif;
+  animation: aparecer 0.3s ease-out;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+
+.cerrar:hover {
+  color: #e74c3c;
+}
+
+/* Modal formulario */
+.formulario-modal input,
+.formulario-modal select {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.formulario-modal button {
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.formulario-modal button:hover {
+  background-color: #444;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fila-inactiva {
+  background-color: #eee;
+}
+
+input[list] {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  width: 100%;
+  appearance: none;
+  font-family: inherit;
+}
+
+/* === Botón hamburguesa === */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #1c1c1c;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  z-index: 1100;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* === Responsive (hasta 768px) === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .container-menu {
+    transform: translateX(-100%);
+  }
+
+  .container-menu.active {
+    transform: translateX(0);
+  }
+
+  .barra-superior {
+    margin-left: 0;
+    padding-left: 60px;
+    height: 70px;
+  }
+
+  .titulo-seccion {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .tarjeta {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+
+  .btn-crear {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  table th, table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .material-symbols-rounded {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .usuario {
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .modal-contenido {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .container-menu h1,
+  .container-menu nav a span,
+  .logout a span {
+    display: none;
+  }
+
+  .container-menu nav a {
+    justify-content: center;
+    padding: 10px 0;
+  }
+}
+
+/* === Responsive extra (hasta 480px) === */
+@media (max-width: 480px) {
+  .barra-superior {
+    padding: 0 10px;
+  }
+
+  .titulo-seccion {
+    font-size: 16px;
+  }
+
+  .usuario {
+    font-size: 10px;
+  }
+
+  .btn-crear {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  table th, table td {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+}

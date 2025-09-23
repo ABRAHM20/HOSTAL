@@ -1,0 +1,80 @@
+/* Fuente sans-serif y layout centrado */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Fondo con borde, sombra y padding elegante */
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border: 1px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-box {
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 0.2rem;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  transition: border 0.2s ease-in-out;
+}
+
+input:focus {
+  border: 1px solid #333;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333333;
+}
