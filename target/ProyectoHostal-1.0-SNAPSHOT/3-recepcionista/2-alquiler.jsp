@@ -16,10 +16,8 @@
     //AlquilerDao alquilerDao = new AlquilerDao();
     pe.edu.dao.ClienteDao clienteDao = new pe.edu.dao.ClienteDao();
     List<pe.edu.entity.Cliente> clientes = clienteDao.listar();
-    //LinkedList<Alquiler> lista = alquilerDao.listar();
     LinkedList<Alquiler> lista = (LinkedList<Alquiler>) request.getAttribute("lista");
     List<Habitacion> habitaciones = (List<Habitacion>)  request.getAttribute("habitaciones");
-    //List<Habitacion> habitaciones = new pe.edu.dao.HabitacionDao().listarDisponibles();
     Alquiler detalle = (Alquiler) request.getAttribute("detalle");
     String modal = (String) request.getAttribute("modal");
     

@@ -59,7 +59,7 @@ public class AlquilerDao implements DaoCrud<Alquiler> {
             System.out.println("Error en activar alquiler: " + e.getMessage());
         }
     }
-
+   //modificar por aca
     public void finalizar(int id_alq) {
         try {
             Connection cnx = Conexion.getInstancia().getConexion();
